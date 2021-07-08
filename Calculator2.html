@@ -1,0 +1,68 @@
+<html>
+
+    <table border="1">
+        <tr>
+            <td colspan="4"><input type="text" id="screen"></td>>
+        </tr>
+        <tr>
+            <td> <input type="button" value="0" onclick="digit('0')"></td>
+            <td> <input type="button" value="1" onclick="digit('1')"></td>
+            <td> <input type="button" value="2" onclick="digit('2')"></td>
+            <td> <input type="button" value="+" onclick="signClick('+')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="3" onclick="digit('3')"></td>
+            <td> <input type="button" value="4" onclick="digit('4')"></td>
+            <td> <input type="button" value="5" onclick="digit('5')"></td>
+            <td> <input type="button" value="-" onclick="signClick('-')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="6" onclick="digit('6')"></td>
+            <td> <input type="button" value="7" onclick="digit('7')"></td>
+            <td> <input type="button" value="8" onclick="digit('8')"></td>
+            <td> <input type="button" value="x" onclick="signClick('x')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="9" onclick="digit('9')"></td>
+            <td> <input type="button" value="c" onclick="clearScreen()"></td>
+            <td> <input type="button" value="=" onclick="result()"></td>
+            <td> <input type="button" value="/" onclick="signClick('/')"></td>
+        </tr>
+        <script>
+            let firstnumber=0;
+            let operator="";
+            let ref=document.getElementById("screen");
+            function digit(num){
+                if(num=="0"){
+                    if(ref.value!=""){
+                        ref.value=ref.value + num;
+                    }
+                }else{
+                    ref.value=ref.value + num;
+                }
+            }
+            function clearScreen(){
+                ref.value="";
+            }
+            function signClick(sign){
+                operator=sign;
+                firstnumber=parseInt(ref.value);
+                ref.value="";
+            }
+            function result(){
+                let secondnumber=parseInt(ref.value);
+                if(operator=="+"){
+                    ref.value=firstnumber+secondnumber;
+                }
+                if(operator=="-"){
+                    ref.value=firstnumber-secondnumber;
+                }
+                if(operator=="x"){
+                    ref.value=firstnumber*secondnumber;
+                }
+                if (operator=="/"){
+                    ref.value=firstnumber / secondnumber;
+                }
+        }
+        </script>
+    </html>

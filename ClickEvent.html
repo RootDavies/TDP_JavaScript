@@ -1,0 +1,17 @@
+<html>
+    <script>
+        let a=1;
+        function doSomething(){
+            
+            a++;
+            let ref=document.createElement("input");
+            ref.type="button";
+            ref.value="Click" +a;
+            ref.onclick=function(){
+                alert("hello my friends");
+        }
+        document.body.appendChild(ref);
+    }
+    </script>
+    <input type="button" value="?" onclick="doSomething()">
+</html>

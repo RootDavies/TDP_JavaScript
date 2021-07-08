@@ -1,0 +1,52 @@
+<html>
+
+<form action="MyServer.html" onsubmit="return check()">
+    
+    Enter username:<input type="text" id="username"> 
+        <span style="color:red;visibility:hidden" id="ErrorUn"> user name is missing </span> <br>
+    Enter email:<input type="text" id="email"> 
+        <span style="color:red;visibility:hidden" id="ErrorUn"> email is missing </span> <br>
+    Enter password:<input type="password" id="pass"> 
+        <span style="color:red;visibility:hidden" id="ErrorPass"> user password is missing </span><br>
+    <input type="submit" >
+</form>
+<script>
+    function check(){
+        let result=true;
+        let username = document.getElementById("username");
+
+        if (document.getElementById("username").value=="" ){
+            document.getElementById("ErrorUn").style.visibility="visible";
+            result=false;
+        }
+        else{
+            document.getElementById("ErrorUn").style.visiblity="hidden";
+        }
+        if (document.getElementById("username").value.length < 10){
+            result=false;
+        }
+
+        for (let index = 0; index < document.getElementById("username").value.length; index++) {
+            if (username.value.substring(index, (index + 1)) == " ") {
+                alert("A space was detected in the username");
+                result=false;
+            }
+            if (username.value.substring(index, (index + 1)) == "*") {
+                alert("A * was detected in the username");
+                result=false;
+            }
+        }
+        
+    
+        if (document.getElementById("pass").value==""){
+        document.getElementById("ErrorPass").style.visibility="visible";
+        result=false;
+        }
+        else{document.getElementById("Errorpass").style.visibility="hidden"};
+
+        return result;
+    }
+    
+</script>
+
+</html>
