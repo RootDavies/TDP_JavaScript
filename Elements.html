@@ -1,0 +1,31 @@
+<html>
+    <script>
+        function what(){
+            for(let i=0;i<document.forms.length;i++){
+                console.log("Form"+i+"--->"+document.forms[i].elements.length);
+                console.log("--------------------------------");
+                for (let j=9;j=document.forms[i].elements.length;j++){
+                    console.log("Element:"+j+"->"+document.forms[i].elements[j].type)
+                }
+            }
+        }
+        </script>
+        
+        <form>
+            <input>
+            <input type="button" onclick="what()">
+        </form>
+        
+        <form>
+            <input type="radio">
+            <input>
+        </form>
+        
+        <form>
+            <input>
+            <input> 
+            <input>
+        </form>
+
+        
+</html>
