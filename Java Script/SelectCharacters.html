@@ -1,0 +1,60 @@
+<html>
+    <script>
+        function CopyUppercase(){
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if(msg.charCodeAt(i)>=65 && msg.charCodeAt(i)<=90){
+                    newmessage+= msg.substring(i,i+1);
+                }
+            }
+            document.getElementById("newmessage").value=newmessage;
+        }
+        function CopyLowercase(){
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if(msg.charCodeAt(i)>=97 && msg.charCodeAt(i)<=122){
+                    newmessage+= msg.substring(i,i+1);
+                }
+            }
+            document.getElementById("newmessage").value=newmessage;
+        }
+        function CopyDigits(){
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if(msg.charCodeAt(i)>=48 && msg.charCodeAt(i)<=57){
+                    newmessage+= msg.substring(i,i+1);
+                }
+            }
+            document.getElementById("newmessage").value=newmessage;
+        }
+        function CopySpecialChar(){
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if(!((msg.charCodeAt(i)>=65 && msg.charCodeAt(i)<=90) || (msg.charCodeAt(i)>=97 && msg.charCodeAt(i)<=122) || (msg.charCodeAt(i)>=48 && msg.charCodeAt(i)<=57))){
+                    newmessage+= msg.substring(i,i+1);
+                }
+            }
+            document.getElementById("newmessage").value=newmessage;
+        }
+    </script>
+    <input type="Text" id="message"><br>
+    Upper case
+    <input type="radio"  name="choice" onClick="CopyUppercase()">
+    Lower case
+    <input type="radio"   name="choice" onClick="CopyLowercase()">
+    Digits
+    <input type="radio"  name="choice" onClick="CopyDigits()">
+    Special characters
+    <input type="radio"   name="choice" onClick="CopySpecialChar()">
+    <br>
+    <input type="Text" id="newmessage">
+
+</html>

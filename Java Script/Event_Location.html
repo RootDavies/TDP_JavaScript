@@ -1,0 +1,18 @@
+<script>
+    function events(){
+        //alert("location:"+event.location);
+        keycode=window.event.charCode;
+        textfield=window.document.getElementById("T");
+        //alert(keycode);
+        if(keycode>=65 && keycode<=90){
+            //alert(textfield.value.length);
+            //textfield.value=textfield.value.substring(0,textfield.value.length-1);
+           window.event.preventDefault() ;
+
+        }
+    }
+    </script>
+    <body>
+        <input onkeypress="events()"id="T"></input>
+    </body>
+    </html>

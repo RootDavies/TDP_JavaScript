@@ -1,0 +1,64 @@
+<html>
+<span id="Main1" style="position:absolute;top:10;left:20"
+        onmouseenter="displaymenu1()">
+    Sports
+</span>
+<span id="Main2" style="position:absolute;top:10;left:250"
+        onmouseenter="displaymenu2()">
+    Countries
+</span>
+<span>
+    <span id="Webpage" style="position:absolute;top:75;left:20">
+</span>
+
+<span id="sportsmenu" style="visibility:hidden">
+    <span id="Football"style="position:absolute;top:35;left:20" 
+                    onmouseenter="mousein('Football')"
+                    onmouseleave="mouseout('Football')"
+                    onclick="webpage('Football')"
+                    >Football</span>
+    <span id="Cricket"style="position:absolute;top:55;left:20" 
+                    onmouseenter="mousein('Cricket')"
+                    onmouseleave="mouseout('Cricket')"
+                    >Cricket</span>
+    <span id="Hockey"style="position:absolute;top:75;left:20" 
+                    onmouseenter="mousein('Hockey')"
+                    onmouseleave="mouseout('Hockey')"
+                    >Hockey</span>
+</span>
+<span id="countrymenu" style="visibility:hidden">
+    <span id="England"style="position:absolute;top:35;left:250" 
+                    onmouseenter="mousein('England')"
+                    onmouseleave="mouseout('England')"
+                    >England</span>
+    <span id="Scotland"style="position:absolute;top:55;left:250" 
+                    onmouseenter="mousein('Scotland')"
+                    onmouseleave="mouseout('Scotland')"
+                    >Scotland</span>
+    <span id="Wales"style="position:absolute;top:75;left:250" 
+                    onmouseenter="mousein('Wales')"
+                    onmouseleave="mouseout('Wales')"
+                    >Wales</span>
+</span>
+<script>
+    function mousein(myID){
+        document.getElementById(myID).style.backgroundColor="lightgrey";
+    }
+    function mouseout(myID){
+        document.getElementById(myID).style.backgroundColor="white";
+    }
+    function displaymenu1(){
+        document.getElementById("sportsmenu").style.visibility="visible";
+        document.getElementById("countrymenu").style.visibility="hidden";
+    }
+    function displaymenu2(){
+        document.getElementById("countrymenu").style.visibility="visible";
+        document.getElementById("sportsmenu").style.visibility="hidden";
+    }
+    function displaypage(){
+        ref.onclick.getElementById("Webpage").style.fontSize="H1";
+    }
+     
+</script>
+
+</html>

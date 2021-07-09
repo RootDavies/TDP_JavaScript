@@ -1,0 +1,18 @@
+<html>
+    <script>
+        function what(){
+            for(let i=0;i<document.forms[0].length;i++){
+                   if(document.forms[0].elements[i].value=="" && document.forms[0].elements[i].type=="text"){
+                    document.getElementById("A"+i).style.visibility="visible";
+                }
+            }
+        }
+    </script>
+        <form>
+            <input><span id="A0" style="visibility:hidden;color:red">**</span><br>
+            <input><span id="A1" style="visibility:hidden;color:red">**</span><br>
+            <input><span id="A2" style="visibility:hidden;color:red">**</span><br>
+            <input><span id="A3" style="visibility:hidden;color:red">**</span><br>
+            <input type="button" onclick="what()">
+        </form>
+</html>

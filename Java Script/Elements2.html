@@ -1,0 +1,21 @@
+<html>
+    <script>
+        function what(){
+            for(let i=0;i<document.forms[0].length;i++){
+               
+               if(document.forms[0].elements[i].value=="" && document.forms[0].elements[i].type=="text"){
+                    input type="text" id="**";style="colour:red";
+                    document.forms[0].elements[i].focus();
+                    return;
+                }
+            }
+        }
+        </script>
+        <form>
+            <input><br>
+            <input><br>
+            <input><br>
+            <input><br>
+            <input type="button" onclick="what()">
+        </form>
+</html>
